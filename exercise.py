@@ -10,8 +10,11 @@ database = "ardit700_pm1database"
 
 cursor = con.cursor()
 
-query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = 'line'")
+query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = 'lasdfasdfine'")
 results = cursor.fetchall()
 
-for result in results:
-    print(result[1])
+if results:
+    for result in results:
+        print(result[1])
+else:
+    print("No word found!")
