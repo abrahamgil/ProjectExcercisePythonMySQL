@@ -10,7 +10,9 @@ database = "ardit700_pm1database"
 
 cursor = con.cursor()
 
-query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = 'lasdfasdfine'")
+word = input("Enter a word: ")
+
+query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = '%s'" % word)
 results = cursor.fetchall()
 
 if results:
